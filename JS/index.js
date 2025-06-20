@@ -1,4 +1,4 @@
-import { products } from "./product.js";
+import { products } from "../Data/product.js";
 
 let createElement = '';
 
@@ -25,9 +25,9 @@ products.forEach((products) => {
         <div class="item_details">
             <p class="product_name">Unit:</p>
             <div class="unit_span">
-                <button onclick="addUnit(this)">+</button>
+                <button class="addUnit">+</button>
                 <span class="unit_value">1</span>
-                <button onclick="reduceUnit(this)">-</button>
+                <button class="reduceUnit">-</button>
             </div>
         </div>
         <button class="add_cart">Add to Cart</button>
@@ -36,6 +36,26 @@ products.forEach((products) => {
   `;
 });
 
-console.log(createElement);
+// console.log(createElement);
 
+// Render to web page
 document.querySelector('.products').innerHTML = createElement;
+
+// Reduce and Add unit buttons
+document.querySelectorAll('.addUnit').forEach((button) => {
+    button.addEventListener('click', () => {
+        
+    })
+})
+document.querySelectorAll('.reduceUnit').forEach((button) => {
+    button.addEventListener('click', () => {
+        
+    })
+})
+
+// Add to Cart
+document.querySelectorAll('.add_cart').forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log('Added to CArt!!');
+    })
+})
