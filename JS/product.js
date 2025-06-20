@@ -54,3 +54,4 @@ export const products = [
     image: "../images/cloth9.png"
   }
 ];
+
