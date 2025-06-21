@@ -1,5 +1,8 @@
 import { products } from "../Data/product.js";
-// import { cart } from "../Data/cart.js";
+import { cart } from "../Data/cart.js";
+
+
+
 let createElement = '';
 products.forEach((products) => {
     createElement  += `
@@ -58,11 +61,6 @@ document.querySelector('.products').addEventListener('click', (e) => {
   }
 });
 
-const cart = [
-    
-];
-
-
 // Add to Cart
 document.querySelector('.products').addEventListener('click', (e) => {
   if (e.target.classList.contains('add_cart')) {
@@ -88,7 +86,10 @@ document.querySelector('.products').addEventListener('click', (e) => {
         image: product.image
       });
       console.log(cart);
+      console.log(cart.length);
     }
+
+    
     
   }
 
